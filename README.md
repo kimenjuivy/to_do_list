@@ -1,7 +1,7 @@
 # IWK Task Manager
 
 ## Overview
-IWK Task Manager is a sophisticated to-do list application built with HTML, CSS, and JavaScript. It offers a user-friendly interface and powerful features to help users manage their tasks efficiently.
+Ivy Wangari Kimenju Task Manager is a sophisticated to-do list application built with HTML, CSS, and JavaScript. It offers a user-friendly interface and powerful features to help users manage their tasks efficiently.
 
 ## Features
 - **Task Management**: Create, edit, and delete tasks with ease.
