@@ -25,6 +25,7 @@ const voiceInputBtn = document.getElementById('voice-input');
 const statsDisplay = document.getElementById('stats-display');
 
 
+
 function init() {
     generateCalendar(new Date().getFullYear(), new Date().getMonth() + 1);
     renderCategories();
@@ -426,7 +427,7 @@ function handleRecurringTasks() {
     renderTasks();
 }
 
-// Task Sharing
+
 function shareTask(task) {
     if (navigator.share) {
         navigator.share({
@@ -442,8 +443,7 @@ function shareTask(task) {
     }
 }
 
-// Initialize the app
+
 init();
 
-// Check for recurring tasks daily
 setInterval(handleRecurringTasks, 24 * 60 * 60 * 1000);
