@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List App</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"></head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Your Advanced To-Do List</h1>
+            <nav>
+                <button id="view-toggle">Toggle View</button>
+                <button id="clear-completed">Clear Completed</button>
+                <button id="dark-mode-toggle">Toggle Dark Mode</button>
+            </nav>
+        </header>
+        
+        <main class="app-container">
+            <section class="sidebar">
+                <div class="calendar-container">
+           
+                </div>
+                <div class="categories">
+                    <h3>Categories</h3>
+                    <ul id="category-list"></ul>
+                    <input type="text" id="new-category" placeholder="Add new category">
+                    <button id="add-category">Add</button>
+                </div>
+                <div class="tags">
+                    <h3>Tags</h3>
+                    <ul id="tag-list"></ul>
+                    <input type="text" id="new-tag" placeholder="Add new tag">
+                    <button id="add-tag">Add</button>
+                </div>
+            </section>
+            
+            <section class="task-container">
+                <form id="task-form">
+                    <input type="text" id="task-input" placeholder="Enter a new task" required>
+                    <input type="date" id="due-date">
+                    <select id="priority">
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                        <option value="urgent">Urgent</option>
+                    </select>
+                    <select id="category-select"></select>
+                    <input type="text" id="tags-input" placeholder="Add tags (comma-separated)">
+                    <select id="repeat-select">
+                        <option value="none">No repeat</option>
+                        <option value="daily">Daily</option>
+                        <option value="weekly">Weekly</option>
+                        <option value="monthly">Monthly</option>
+                        <option value="custom">Custom</option>
+                    </select>
+                    <input type="file" id="attachment-input" multiple>
+                    <button type="submit">Add Task</button>
+                    <button type="button" id="voice-input">Voice Input</button>
+                </form>
+                
+                <div class="view-options">
+                    <label><input type="radio" name="view" value="all" checked> All</label>
+                    <label><input type="radio" name="view" value="active"> Active</label>
+                    <label><input type="radio" name="view" value="completed"> Completed</label>
+                </div>
+                
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="Search tasks">
+                    <select id="search-filter">
+                        <option value="all">All</option>
+                        <option value="text">Text</option>
+                        <option value="date">Date</option>
+                        <option value="priority">Priority</option>
+                        <option value="category">Category</option>
+                        <option value="tag">Tag</option>
+                    </select>
+                </div>
+                
+                <div class="task-list" id="task-list"></div>
+            </section>
+            
+            <section class="stats-container">
+                <h3>Statistics</h3>
+                <div id="stats-display"></div>
+            </section>
+        </main>
+    </div>
+    <button id="logout-button">Logout</button>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="initials">IWK</span>
+            </div>
+            <div class="footer-info">
+                <p class="footer-name">Ivy Wangari Kimenju</p>
+                <p class="footer-copyright">&copy; 2024 All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
